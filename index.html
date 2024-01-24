@@ -7,72 +7,26 @@
   </head>
   <body>
     <script>
-      var fNumber = prompt("Enter First Number");
-      var sNumber = prompt("Enter Second Number");
-      fNumber = parseFloat(fNumber, 10);
-      sNumber = parseFloat(sNumber, 10);
-
-      var plus, minus, multiplied, divded, modulas;
-
-      plus = fNumber + sNumber;
-      minus = fNumber - sNumber;
-      multiplied = fNumber * sNumber;
-      divded = fNumber / sNumber;
-      modulas = fNumber % sNumber;
-
-      document.write(fNumber + " + " + sNumber + " = " + plus + "<br/>");
-      document.write(fNumber + " - " + sNumber + " = " + minus + "<br/>");
-      document.write(fNumber + " * " + sNumber + " = " + multiplied + "<br/>");
-      document.write(fNumber + " / " + sNumber + " = " + divded + "<br/>");
-      document.write(fNumber + " % " + sNumber + " = " + modulas + "<br/>");
-
-      var fa = prompt("Please enter fa ");
-      var c = (fa - 32) * (5 / 9);
-      document.write(c + "<br/>");
-
-      var cels = prompt("Please enter cels");
-      var f = cels * (5 / 9) + 32;
-      document.write(f + "<br/>");
-
-      var marks = prompt("Please enter marks");
-
-      if (marks >= 80) {
-        document.write(marks + " is your marks and you are A+" + "<br/>");
-      } else if (marks >= 70) {
-        document.write(marks + " is your marks and you are A" + "<br/>");
-      } else if (marks >= 60) {
-        document.write(marks + " is your marks and you are A-" + "<br/>");
-      } else if (marks >= 50) {
-        document.write(marks + " is your marks and you are B" + "<br/>");
-      } else if (marks >= 40) {
-        document.write(marks + " is your marks and you are C" + "<br/>");
-      } else if (marks >= 33) {
-        document.write(marks + " is your marks and you are D" + "<br/>");
-      } else {
-        document.write(marks + " is your marks and you are F" + "<br/>");
-      }
-
-      switch (marks) {
-        case marks >= 70:
-          document.write(marks + " is your marks and you are " + "A" + "<br/>");
-        case marks >= 60:
-          document.write(
-            marks + " is your marks and you are " + "A-" + "<br/>"
-          );
-        case marks >= 50:
-          document.write(marks + " is your marks and you are " + "B" + "<br/>");
-        case marks >= 40:
-          document.write(marks + " is your marks and you are " + "C" + "<br/>");
-        case marks >= 33:
-          document.write(marks + " is your marks and you are " + "D" + "<br/>");
-        case marks < 33:
-          document.write(marks + " is your marks and you are " + "Fail" + "<br/>");
-        case marks < 0 || marks >100:
-        document.write(marks + " is not a valid");
+      var takeLetter = prompt("enter a letter");
+      takeLetter = takeLetter.toLocaleLowerCase();
+      switch (takeLetter) {
+        case "a":
+          document.write("You enter " + takeLetter + " That is Vowel");
+          break;
+        case "e":
+          document.write("You enter " + takeLetter + " That is Vowel");
+          break;
+        case "i":
+          document.write("You enter " + takeLetter + " That is Vowel");
+          break;
+        case "o":
+          document.write("You enter " + takeLetter + " That is Vowel");
+          break;
+        case "u":
+          document.write("You enter " + takeLetter + " That is Vowel");
+          break;
         default:
-          document.write(
-            marks + " is your marks and you are " + "Fail" + "<br/>"
-          );
+          document.write("You enter " + takeLetter + " That is Consonant");
       }
     </script>
   </body>
