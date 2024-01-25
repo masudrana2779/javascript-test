@@ -7,18 +7,14 @@
   </head>
   <body>
     <script>
-      var firstNumbetr, sum;
+      var num1, num2, num3, results;
+      num1 = parseInt(prompt("Enter the first number"));
+      num2 =  parseInt(prompt("Enter the second number"));
+      num3 =  parseInt(prompt("Enter the third number"));
 
-      firstNumbetr = 3;
-      sum = 0;
-      while (firstNumbetr <= 100) {
-        if (firstNumbetr % 3 === 0 && firstNumbetr % 5 === 0) {
-          document.write(firstNumbetr + " ");
-          sum = sum + firstNumbetr;
-        }
-        firstNumbetr++;
-      }
-      document.write("<br />" + sum);
+      results =
+        num1 > num2 && num1 > num3 ? num1 : num2 > num3 ? num2 : num3;
+      document.write(results);
     </script>
   </body>
 </html>
