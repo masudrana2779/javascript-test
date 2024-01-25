@@ -7,27 +7,18 @@
   </head>
   <body>
     <script>
-      var takeLetter = prompt("enter a letter");
-      takeLetter = takeLetter.toLocaleLowerCase();
-      switch (takeLetter) {
-        case "a":
-          document.write("You enter " + takeLetter + " That is Vowel");
-          break;
-        case "e":
-          document.write("You enter " + takeLetter + " That is Vowel");
-          break;
-        case "i":
-          document.write("You enter " + takeLetter + " That is Vowel");
-          break;
-        case "o":
-          document.write("You enter " + takeLetter + " That is Vowel");
-          break;
-        case "u":
-          document.write("You enter " + takeLetter + " That is Vowel");
-          break;
-        default:
-          document.write("You enter " + takeLetter + " That is Consonant");
+      var firstNumbetr, sum;
+
+      firstNumbetr = 3;
+      sum = 0;
+      while (firstNumbetr <= 100) {
+        if (firstNumbetr % 3 === 0 && firstNumbetr % 5 === 0) {
+          document.write(firstNumbetr + " ");
+          sum = sum + firstNumbetr;
+        }
+        firstNumbetr++;
       }
+      document.write("<br />" + sum);
     </script>
   </body>
 </html>
