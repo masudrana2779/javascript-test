@@ -7,14 +7,42 @@
   </head>
   <body>
     <script>
-      var num1, num2, num3, results;
-      num1 = parseInt(prompt("Enter the first number"));
-      num2 =  parseInt(prompt("Enter the second number"));
-      num3 =  parseInt(prompt("Enter the third number"));
+      //   function heighestScore(scores) {
+      //     console.log(scores);
+      //     var hN = scores.sort(function (a, b) {
+      //     //   return a - b;
+      //       return b - a;
+      //     });
+      //     console.log(hN);
+      //     // console.log(hN[hN.length - 1]);
+      //     console.log(hN[0]);
+      //     return hN[hN.length - 1];
+      //   }
+      //   var scores = [
+      //     20, 52, 13, 64, 8, 4, 76, 1, 56, 150, 45, 42, 85, 99, 10, 5, 65, 62, 3,
+      //   ];
 
-      results =
-        num1 > num2 && num1 > num3 ? num1 : num2 > num3 ? num2 : num3;
-      document.write(results);
+      //   var maxScore = heighestScore(scores);
+      //   document.write(maxScore);
+
+      function heighestScore(scores) {
+        var maxScore = scores[0];
+        for (var x = 1; x < scores.length; x++) {
+          if (maxScore < scores[x]) {
+            maxScore = scores[x];
+          }
+        }
+        return maxScore;
+      }
+      var scores = [
+        20, 52, 13, 64, 8, 4, 76, 1, 56, 150, 45, 42, 85, 99, 10, 5, 65, 62, 3,
+      ];
+      var finalResult = heighestScore(scores);
+      document.write(
+        "This is the final result of the heighest score calculation " +
+          finalResult +
+          "."
+      );
     </script>
   </body>
 </html>
