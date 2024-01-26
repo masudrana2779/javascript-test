@@ -7,42 +7,34 @@
   </head>
   <body>
     <script>
-      //   function heighestScore(scores) {
-      //     console.log(scores);
-      //     var hN = scores.sort(function (a, b) {
-      //     //   return a - b;
-      //       return b - a;
-      //     });
-      //     console.log(hN);
-      //     // console.log(hN[hN.length - 1]);
-      //     console.log(hN[0]);
-      //     return hN[hN.length - 1];
-      //   }
-      //   var scores = [
-      //     20, 52, 13, 64, 8, 4, 76, 1, 56, 150, 45, 42, 85, 99, 10, 5, 65, 62, 3,
-      //   ];
-
-      //   var maxScore = heighestScore(scores);
-      //   document.write(maxScore);
-
-      function heighestScore(scores) {
-        var maxScore = scores[0];
-        for (var x = 1; x < scores.length; x++) {
-          if (maxScore < scores[x]) {
-            maxScore = scores[x];
+      function heightestSore(playerInfo) {
+        var maxNumPlayer = playerInfo[0];
+        var maxNumPlayers = playerInfo[0][1];
+        for (var i = 1; i < playerInfo.length; i++) {
+          if (maxNumPlayers < playerInfo[i][1]) {
+            maxNumPlayer = playerInfo[i];
+            maxNumPlayers = playerInfo[i][1];
           }
         }
-        return maxScore;
+        return maxNumPlayer;
       }
-      var scores = [
-        20, 52, 13, 64, 8, 4, 76, 1, 56, 150, 45, 42, 85, 99, 10, 5, 65, 62, 3,
+      var playerInfo = [
+        ["player 1 ", 21],
+        ["player 2 ", 920],
+        ["player 3 ", 32],
+        ["player 4 ", 65],
+        ["player 5 ", 10],
+        ["player 6 ", 6],
+        ["player 7 ", 85],
+        ["player 8 ", 401],
+        ["player 9 ", 34],
+        ["player 10 ", 54],
       ];
-      var finalResult = heighestScore(scores);
-      document.write(
-        "This is the final result of the heighest score calculation " +
-          finalResult +
-          "."
-      );
+
+      var player = heightestSore(playerInfo);
+      console.log(player, "sd");
+      document.write("player Name is " + player[0] + "<br />" );
+      document.write("player Score is " + player[1] + "<br />" );
     </script>
   </body>
 </html>
