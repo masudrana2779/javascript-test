@@ -7,34 +7,53 @@
   </head>
   <body>
     <script>
-      function heightestSore(playerInfo) {
-        var maxNumPlayer = playerInfo[0];
-        var maxNumPlayers = playerInfo[0][1];
-        for (var i = 1; i < playerInfo.length; i++) {
-          if (maxNumPlayers < playerInfo[i][1]) {
-            maxNumPlayer = playerInfo[i];
-            maxNumPlayers = playerInfo[i][1];
-          }
-        }
-        return maxNumPlayer;
-      }
-      var playerInfo = [
-        ["player 1 ", 21],
-        ["player 2 ", 920],
-        ["player 3 ", 32],
-        ["player 4 ", 65],
-        ["player 5 ", 10],
-        ["player 6 ", 6],
-        ["player 7 ", 85],
-        ["player 8 ", 401],
-        ["player 9 ", 34],
-        ["player 10 ", 54],
-      ];
+      // function heightestSore(playerInfo) {
+      //   var maxNumPlayer = playerInfo[0];
+      //   var maxNumPlayers = playerInfo[0][1];
+      //   for (var i = 1; i < playerInfo.length; i++) {
+      //     if (maxNumPlayers < playerInfo[i][1]) {
+      //       maxNumPlayer = playerInfo[i];
+      //       maxNumPlayers = playerInfo[i][1];
+      //     }
+      //   }
+      //   return maxNumPlayer;
+      // }
+      // var playerInfo = [
+      //   ["player 1 ", 21],
+      //   ["player 2 ", 920],
+      //   ["player 3 ", 32],
+      //   ["player 4 ", 65],
+      //   ["player 5 ", 10],
+      //   ["player 6 ", 6],
+      //   ["player 7 ", 85],
+      //   ["player 8 ", 401],
+      //   ["player 9 ", 34],
+      //   ["player 10 ", 54],
+      // ];
 
-      var player = heightestSore(playerInfo);
-      console.log(player, "sd");
-      document.write("player Name is " + player[0] + "<br />" );
-      document.write("player Score is " + player[1] + "<br />" );
+      // var player = heightestSore(playerInfo);
+      // console.log(player, "sd");
+      // document.write("player Name is " + player[0] + "<br />" );
+      // document.write("player Score is " + player[1] + "<br />" );
+
+      var wonNum = 0;
+      var lostNum = 0;
+      for (var i = 0; i < 5; i++) {
+        var number1 = parseInt(prompt("Enter a number between 0 and 5"));
+        var matchNumber = Math.floor(Math.random() * 5 + 1);
+
+        if (number1 === matchNumber) {
+          console.log("You have won!");
+          wonNum++;
+        } else {
+          console.log("You lose!");
+          lostNum++;
+        }
+      }
+      console.log("You have won!" + wonNum);
+      console.log("You have lose!" + lostNum);
+      document.write("You have won!" + wonNum + "<br />\n");
+      document.write("You have lost!" + lostNum)
     </script>
   </body>
 </html>
