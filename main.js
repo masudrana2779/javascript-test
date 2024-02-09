@@ -15,7 +15,7 @@ function prev() {
   } else {
     imgTag.src = photos[count];
   }
-}
+} 
 
 function next() {
   count++;
