@@ -31,9 +31,17 @@ var go;
 function autoplay() {
   go = setInterval(() => {
     next();
-  }, 1000);
+  }, 3000);
 }
 
 function stopAutoplay() {
     clearInterval(go);
 }
+
+
+var textarea = document.getElementById('test');
+
+textarea.addEventListener('keydown', (e) => {
+  console.log('keydown = ' + e.key);
+  console.log(e);
+});
